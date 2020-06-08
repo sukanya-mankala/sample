@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a9dc21de-2978-4323-b429-9eb70ea2b4ae" activeEnvironment="Default" name="Add and delete with xml" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="02235116-ad48-499c-bcfe-af399a74ad49" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://216.10.245.166" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://216.10.245.166</con:endpoint></con:endpoints><con:resource name="Xml" path="/maps/api/place/add/xml" id="db21a9ec-bd98-42b3-908d-02ca45e9a8b0"><con:settings/><con:parameters><con:parameter><con:name>key</con:name><con:value> qaclick123</con:value><con:style>QUERY</con:style><con:default> qaclick123</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Add" id="ac474254-26e5-4806-9f23-5405dbff9104" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>root</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Add-place" id="860c0849-628f-4807-80f1-62a923e37d0a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <location>
+        <lat>-38.383494</lat>
+        <lng>33.427362</lng>
+    </location>
+    <accuracy>50</accuracy>
+    <name>The Mens store</name>
+    <phone_number>(+91) 983 893 3937</phone_number>
+    <address>Anna Salai, Chennai</address>
+    <types>shoe park</types>
+    <types>kadai</types>
+    <website>http://google.com</website>
+    <language>tamil-IN</language>
+</root>
+
+
+]]></con:request><con:originalUri>http://216.10.245.166/maps/api/place/add/xml</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value=" qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="d84e69a0-1913-4fb1-96b9-2f3f3e589456" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://216.10.245.166" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://216.10.245.166</con:endpoint></con:endpoints><con:resource name="Json" path="/maps/api/place/delete/xml" id="b6b03e0c-43ef-42a6-a6de-bcd4df1dafc7"><con:settings/><con:parameters><con:parameter><con:name>key</con:name><con:value>qaclick123</con:value><con:style>QUERY</con:style><con:default>qaclick123</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Delete" id="40602d01-4e14-4c10-84a0-48734803e6ca" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>root</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>response</con:element></con:representation><con:request name="Delete -place" id="e83dfdd2-19d0-4e34-b3a2-a25f771a4dbf" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request>&lt;?xml version="1.0" encoding="UTF-8" ?>
+&lt;root>
+    &lt;place_id>3392ee4f831b791808166009eb745e96&lt;/place_id>
+&lt;/root>
+
+</con:request><con:originalUri>http://216.10.245.166/maps/api/place/delete/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value="qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="061b5b8a-b53a-4019-ae0f-f6678f76feac" name="Add and Delete Property Transfer - Xml"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="724e1d4d-bf7d-4e9d-83bf-6498234845cb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Add" id="6ed5dfc6-d66d-476b-a9b4-70311c653243"><con:settings/><con:config service="http://216.10.245.166" methodName="Add" resourcePath="/maps/api/place/add/xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Add" id="684fe7cd-dfb7-4d4d-bf2e-27e22a8ef1e1" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <location>
+        <lat>-38.383494</lat>
+        <lng>33.427362</lng>
+    </location>
+    <accuracy>50</accuracy>
+    <name>The Mens store</name>
+    <phone_number>(+91) 983 893 3937</phone_number>
+    <address>Anna Salai, Chennai</address>
+    <types>shoe park</types>
+    <types>kadai</types>
+    <website>http://google.com</website>
+    <language>tamil-IN</language>
+</root>
+
+
+]]></con:request><con:originalUri>http://216.10.245.166/maps/api/place/add/xml</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><con:entry key="key" value=" qaclick123"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="PlaceId Transfer" id="63c1d550-c4ce-42de-b427-baf594c6703b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="true"><con:name>placeId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Add</con:sourceStep><con:sourcePath>//*:place_id</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Delete</con:targetStep><con:targetPath>//*:place_id</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Delete" id="9c155670-da58-48fe-84eb-4d27f2026fee"><con:settings/><con:config service="http://216.10.245.166" methodName="Delete" resourcePath="/maps/api/place/delete/xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Delete" id="5cc5a515-7962-440f-a15b-8447108328a6" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166</con:endpoint><con:request>&lt;root>
+    &lt;place_id>7dc9f8ce4176b32389aa9b84666ae981&lt;/place_id>
+&lt;/root></con:request><con:originalUri>http://216.10.245.166/maps/api/place/delete/xml</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><con:entry key="key" value="qaclick123"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="3036e2cf-7df1-4ec0-ab82-1e9390209fd4" name="Add Delete Proprty"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0c4e31f7-2979-457c-bb4e-ec4860addb61" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Add" id="b313153e-eda3-47a5-8b80-db3754ab82c5"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/maps/api/place/add/xml" methodName="Add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Add" id="860c0849-628f-4807-80f1-62a923e37d0a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <location>
+        <lat>-38.383494</lat>
+        <lng>33.427362</lng>
+    </location>
+    <accuracy>50</accuracy>
+    <name>The Mens store</name>
+    <phone_number>(+91) 983 893 3937</phone_number>
+    <address>Anna Salai, Chennai</address>
+    <types>shoe park</types>
+    <types>kadai</types>
+    <website>http://google.com</website>
+    <language>tamil-IN</language>
+</root>
+
+
+]]></con:request><con:originalUri>http://216.10.245.166/maps/api/place/add/xml</con:originalUri><con:assertion type="GroovyScriptAssertion" id="45c0859a-667d-4a29-bf6b-322813edfa55" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.*
+
+def id =messageExchange.response.responseContent
+
+def holder = new XmlHolder(id)
+
+def placeId =	holder.getNodeValue("//place_id")
+
+log.info placeId
+
+context.testCase.getTestStepByName("placeId").setPropertyValue("placeid",placeId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value=" qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="placeId" id="61615d6f-f058-4658-b975-e5f4fec760f7"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>placeid</con:name><con:value>31dd9c22c48064859965d77c8331c81b</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Delete" id="cf8cf83c-326f-4cc1-9c2b-c47d93a46cee"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/maps/api/place/delete/xml" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Delete" id="e83dfdd2-19d0-4e34-b3a2-a25f771a4dbf" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request>&lt;?xml version="1.0" encoding="UTF-8" ?>
+&lt;root>
+    &lt;place_id>${placeId#placeId}&lt;/place_id>
+&lt;/root>
+
+</con:request><con:originalUri>http://216.10.245.166/maps/api/place/delete/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value="qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="11ea01a1-b72a-41ca-87a4-7f8f6284281b" name="Add and Delete with script at test case level"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="312297fe-af4d-4fa1-8a81-d36a8b6ff1ce" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Add" id="b80ede97-b17f-4460-8201-743ff3fdc0df"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/maps/api/place/add/xml" methodName="Add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Add" id="860c0849-628f-4807-80f1-62a923e37d0a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <location>
+        <lat>-38.383494</lat>
+        <lng>33.427362</lng>
+    </location>
+    <accuracy>50</accuracy>
+    <name>The Mens store</name>
+    <phone_number>(+91) 983 893 3937</phone_number>
+    <address>Anna Salai, Chennai</address>
+    <types>shoe park</types>
+    <types>kadai</types>
+    <website>http://google.com</website>
+    <language>tamil-IN</language>
+</root>
+
+
+]]></con:request><con:originalUri>http://216.10.245.166/maps/api/place/add/xml</con:originalUri><con:assertion type="GroovyScriptAssertion" id="af52fc31-9ec7-4de9-8564-1582a293f178" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.*
+
+def id =messageExchange.response.responseContent
+
+def holder = new XmlHolder(id)
+
+def placeId =	holder.getNodeValue("//place_id")
+
+log.info placeId
+
+context.testCase.setPropertyValue("placeid",placeId)</scriptText></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="7b232d22-409f-4609-a8ce-240467cc47f0" name="Response SLA"><con:configuration><SLA>200</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value=" qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Delete" id="0ed6eb0d-f243-4b38-b32f-df0c5aebd85f"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/maps/api/place/delete/xml" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Delete" id="e83dfdd2-19d0-4e34-b3a2-a25f771a4dbf" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request>&lt;?xml version="1.0" encoding="UTF-8" ?>
+&lt;root>
+    &lt;place_id>${#TestCase#placeId}&lt;/place_id>
+&lt;/root>
+
+</con:request><con:originalUri>http://216.10.245.166/maps/api/place/delete/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="key" value="qaclick123" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>key</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>placeid</con:name><con:value>ccdbd029f37c60cb94041ab30a96639c</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
